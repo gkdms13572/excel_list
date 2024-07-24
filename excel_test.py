@@ -5,6 +5,8 @@ def excel_to_list(path, sheetName):
     sheet = file[sheetName]
     data = []
     for row in sheet.iter_rows(values_only=True):
+        # sheet를 가져와서 iter_rows선언할게 !
+        # values_only를 안썼을 때는 주소까지 출력됨
         data.append(list(row))
     return data
 
